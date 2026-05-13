@@ -1,5 +1,19 @@
 # react-rails
 
+> [!IMPORTANT]
+> **This is the ezCater internal fork of `reactjs/react-rails`, and it is in a terminal state.** Read the Fork Status section below before making changes here.
+
+## Fork Status
+
+- **No functional commits since 2017-06-30** ([`43e07ac`](https://github.com/ezcater/react-rails/commit/43e07ac), "2.2.1"). Subsequent activity on `master` is GitHub Actions hygiene only (CodeQL, CODEOWNERS, action SHA pinning).
+- **`ez-rails` consumes the `rails5` branch, not `master`.** `rails5` is pinned at gem v1.7.1 (`master` is at v2.2.1). The two branches do not contain the same files.
+- **The `master` branch exists primarily to satisfy CodeQL scans on the default branch.** Patches landed on `master` (e.g. the CWE-78 URI.open fix) are here to clear GitHub code scanning alerts. They are not consumed by `ez-rails` directly.
+- **Long-term plan: archive this fork.** Once `ez-rails` migrates off `react-rails` SSR entirely, this fork will be archived. That work is tracked separately as a 2027+ effort owned by Monolith Experience. See the [MX-1374 investigation](https://ezcater.atlassian.net/wiki/spaces/POL/pages/6311247893) for the full context and decision.
+
+For questions, contact [#pb-s-monolith-experience](https://ezcater.slack.com/archives/C03TE7HHUFP).
+
+---
+
 [![Gem](https://img.shields.io/gem/v/react-rails.svg?style=flat-square)](http://rubygems.org/gems/react-rails)
 [![Build Status](https://img.shields.io/travis/reactjs/react-rails/master.svg?style=flat-square)](https://travis-ci.org/reactjs/react-rails)
 [![Gemnasium](https://img.shields.io/gemnasium/reactjs/react-rails.svg?style=flat-square)](https://gemnasium.com/reactjs/react-rails)
