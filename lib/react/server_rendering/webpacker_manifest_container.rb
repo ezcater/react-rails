@@ -15,7 +15,7 @@ module React
         asset_path = Webpacker::Manifest.lookup(logical_path).to_s
         if asset_path.start_with?("http")
           # Get a file from the webpack-dev-server
-          dev_server_asset = open(asset_path).read
+          dev_server_asset = URI(asset_path).open.read
           # Remove `webpack-dev-server/client/index.js` code which causes ExecJS to 💥
           dev_server_asset.sub!(CLIENT_REQUIRE, '//\0')
           dev_server_asset
